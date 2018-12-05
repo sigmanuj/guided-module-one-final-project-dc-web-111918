@@ -6,5 +6,3 @@ class CreateMoviesTable <ActiveRecord::Miration[5.1]
     end
   end
 end
-
-end
