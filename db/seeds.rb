@@ -32,6 +32,7 @@ die_5 = Movie.create(title: "A Good Day to Die Hard")
 
 # movie_source_test = Movie_Source.create(title: "Movie Title", provider: "Source Provider")
 
+<<<<<<< HEAD
 ms_1 = Movie_Source.create!(title: "The Fast and the Furious", provider: )
 ms_2 = Movie_Source.create(title: "2 Fast 2 Furious", provider: )
 ms_3 = Movie_Source.create(title: "The Fast and the Furious: Tokyo Drift", provider: )
@@ -47,3 +48,26 @@ ms_12 = Movie_Source.create(title: "Die Hard 2", provider: )
 ms_13 = Movie_Source.create(title: "Die Hard with a Vengeance", provider: )
 ms_14 = Movie_Source.create(title: "Live Free or Die Hard", provider: )
 ms_15 = Movie_Source.create!(title: "A Good Day to Die Hard", provider: )
+=======
+ms_1 = Movie_Source.create!(title: fast_1, provider: )
+ms_2 = Movie_Source.create(title: fast_2, provider: )
+ms_3 = Movie_Source.create(title: fast_3, provider: )
+ms_4 = Movie_Source.create(title: fast_4, provider: )
+ms_5 = Movie_Source.create(title: fast_5, provider: )
+ms_6 = Movie_Source.create(title: fast_6, provider: )
+ms_7 = Movie_Source.create(title: fast_7, provider: )
+ms_8 = Movie_Source.create(title: fast_8, provider: )
+
+
+#############SOURCES####################
+
+
+source_1 = Source.create(provider: "Hulu")
+source_2 = Source.create(provider: "Netflix")
+source_3 = Source.create(provider: "Amazon Prime")
+source_4 = Source.create(provider: "Xfinity Comcast")
+source_5 = Source.create(provider: "HBO")
+source_6 = Source.create(provider: "AT&T U-Verse")
+source_7 = Source.create(provider: "Fios")
+source_8 = Source.create(provider: "Youtube")
+>>>>>>> 2f8a1fc28569967a399546a9f909ec4417222eb1
