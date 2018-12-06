@@ -40,3 +40,16 @@ ms_5 = Movie_Source.create(title: fast_5, provider: )
 ms_6 = Movie_Source.create(title: fast_6, provider: )
 ms_7 = Movie_Source.create(title: fast_7, provider: )
 ms_8 = Movie_Source.create(title: fast_8, provider: )
+
+
+#############SOURCES####################
+
+
+source_1 = Source.create(provider: "Hulu")
+source_2 = Source.create(provider: "Netflix")
+source_3 = Source.create(provider: "Amazon Prime")
+source_4 = Source.create(provider: "Xfinity Comcast")
+source_5 = Source.create(provider: "HBO")
+source_6 = Source.create(provider: "AT&T U-Verse")
+source_7 = Source.create(provider: "Fios")
+source_8 = Source.create(provider: "Youtube")
