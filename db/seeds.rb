@@ -1,3 +1,8 @@
+require 'require_all'
+require_all 'app'
+require_relative "../config/environment.rb"
+
+
 
 ####MOVIES#########
 fast_1 = Movie.create!(title: "The Fast and the Furious")

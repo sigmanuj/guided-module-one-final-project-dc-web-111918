@@ -1,3 +1,4 @@
+require 'active_record'
 class MovieSource < ActiveRecord::Base
 
   belongs_to :movie
