@@ -49,7 +49,7 @@ source_8 = Source.find_or_create_by(provider: "Youtube")
 # movie_source_test = Movie_Source.create(title: "Movie Title", provider: "Source Provider")
 
 
-ms_1 = MovieSource.find_or_create_by(movie: fast_1, source: source_1)
+ms_1 = MovieSource.find_or_create_by(movie: fast_1, source: source_1, source: source_3, source: source_5)
 ms_2 = MovieSource.find_or_create_by(movie: fast_2, source: source_2)
 ms_3 = MovieSource.find_or_create_by(movie: fast_3, source: source_7)
 ms_4 = MovieSource.find_or_create_by(movie: fast_4, source: source_3)
