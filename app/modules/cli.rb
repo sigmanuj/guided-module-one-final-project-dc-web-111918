@@ -16,7 +16,7 @@ class Cli
 
   def gets_user_input(input1)
   puts "We've got a wide selection of Movies we know you'll love."
-  puts "Select a movie you'd like to watch to get started."
+  puts "Select a movie you'd like to watch."
   Movie.all.each_with_index do |movie, index|
     puts "#{index+1}. #{movie.title}"
 
@@ -26,7 +26,12 @@ class Cli
     gets.strip
   end
 
-  def gets_user_search
+  def gets_user_search(input2)
+    puts "Phenominal selection!!!"
+    puts "This Cinematic Masterpiece Can Be Watched With:"
+    Source.all.select do |source|
+      source.movies == movie
+    end
 
   end
 
@@ -44,8 +49,8 @@ class Cli
   def run
     response1 = self.greeting
     self.gets_user_input(response1)
-    response2 = self.gets_user_input(response1)
-    self.gets_user_search(response2)
+    # response2 = self.gets_user_input(response1)
+    self.gets_user_search(response1)
 
 
     # input = gets_user_input
