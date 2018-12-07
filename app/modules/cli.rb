@@ -43,19 +43,15 @@ class Cli
 
     ########## MATCH MOVIE_TITLE_INPUT TO DATA ###########
 
-   movie_title_input = Movie.where(title: movie_title_input).take.list_sources
+   movie_title_input = Movie.find_by(title: movie_title_input)
 
+   movie_title_input.list_sources
 
+   # binding.pry
     # self.list_sources(movie_title_input)
   end
 
 
-  def list_sources(input)
-    binding.pry
-    Source.provider.each_with_index do |src, indx|
-      puts "#{indx+1}. #{src.provider}"
-    end
-  end
 
   #
   # def show_sources(provider)
@@ -68,9 +64,6 @@ class Cli
     response1 = self.greeting
     self.gets_user_input(response1)
 
-    # input = gets_user_input
-    # find_movie(input)
-    # run
   end
 end
 #
