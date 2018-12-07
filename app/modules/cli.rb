@@ -41,26 +41,26 @@ class Cli
     end
     puts "         Here are some places you can watch #{movie_title_input}:"
 
+<<<<<<< HEAD
   def gets_user_search(input2)
     puts "Phenominal selection!!!"
     puts "This Cinematic Masterpiece Can Be Watched With:"
     Source.all.select do |source|
       source.movies == movie
     end
+=======
+    ########## MATCH MOVIE_TITLE_INPUT TO DATA ###########
+>>>>>>> e9b76acf832b2301c39f77a01dd95e99999017f9
 
-   movie_title_input = Movie.where(title: movie_title_input).take.list_sources
+   movie_title_input = Movie.find_by(title: movie_title_input)
 
+   movie_title_input.list_sources
 
+   # binding.pry
     # self.list_sources(movie_title_input)
   end
 
 
-  def list_sources(input)
-    binding.pry
-    Source.provider.each_with_index do |src, indx|
-      puts "#{indx+1}. #{src.provider}"
-    end
-  end
 
   #
   # def show_sources(provider)
@@ -72,13 +72,13 @@ class Cli
   def run
     response1 = self.greeting
     self.gets_user_input(response1)
+<<<<<<< HEAD
     # response2 = self.gets_user_input(response1)
     self.gets_user_search(response1)
 
+=======
+>>>>>>> e9b76acf832b2301c39f77a01dd95e99999017f9
 
-    # input = gets_user_input
-    # find_movie(input)
-    # run
   end
 end
 
