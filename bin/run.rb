@@ -1,7 +1,4 @@
-require_relative 'config/environment'
+require_relative '../config/environment'
 
-def greet
-  puts "Welcome to Movie Source!"
-end
-
-greet
+new_cli = CommandLineInterface.new
+new_cli.call
