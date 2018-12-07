@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 3) do
 
   create_table "movie_sources", force: :cascade do |t|
-    t.integer "title_id"
-    t.integer "provider_id"
+    t.integer "movie_id"
+    t.integer "source_id"
   end
 
   create_table "movies", force: :cascade do |t|
