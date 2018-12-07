@@ -4,6 +4,7 @@ require_relative "../config/environment.rb"
 
 
 
+
 ####MOVIES#########
 fast_1 = Movie.create!(title: "The Fast and the Furious")
 fast_2 = Movie.create(title: "2 Fast 2 Furious")
@@ -31,31 +32,6 @@ die_4 = Movie.create(title: "Live Free or Die Hard")
 die_5 = Movie.create(title: "A Good Day to Die Hard")
 
 
-
-
-##########MOVIE_SOURCES###############
-
-# movie_source_test = Movie_Source.create(title: "Movie Title", provider: "Source Provider")
-
-
-ms_1 = Movie_Source.create!(title: fast_1, provider: source_1)
-ms_2 = Movie_Source.create(title: fast_2, provider: source_2)
-ms_3 = Movie_Source.create(title: fast_3, provider: source_7)
-ms_4 = Movie_Source.create(title: fast_4, provider: source_3)
-ms_5 = Movie_Source.create(title: fast_5, provider: source_5)
-ms_6 = Movie_Source.create(title: fast_6, provider: source_4)
-ms_7 = Movie_Source.create(title: fast_7, provider: source_1)
-ms_8 = Movie_Source.create(title: fast_8, provider: source_8)
-ms_9 = Movie_Source.create(title: love, provider: source_7)
-ms_10 = Movie_Source.create(title: devil, provider: source_3)
-ms_11 = Movie_Source.create(title: ps, provider: source_4)
-ms_12 = Movie_Source.create(title: die_1, provider: source_2)
-ms_13 = Movie_Source.create(title: die_2, provider: source_8)
-ms_14 = Movie_Source.create(title: die_3, provider: source_6)
-ms_15 = Movie_Source.create!(title: die_4, provider: source_5)
-ms_16 = Movie_source.create(title: die_5, provider: source_6)
-
-
 #############SOURCES####################
 
 
@@ -67,3 +43,26 @@ source_5 = Source.create(provider: "HBO")
 source_6 = Source.create(provider: "AT&T U-Verse")
 source_7 = Source.create(provider: "Fios")
 source_8 = Source.create(provider: "Youtube")
+
+
+##########MOVIE_SOURCES###############
+
+# movie_source_test = Movie_Source.create(title: "Movie Title", provider: "Source Provider")
+
+
+ms_1 = MovieSource.create!(title: fast_1, provider: source_1)
+ms_2 = MovieSource.create(title: fast_2, provider: source_2)
+ms_3 = MovieSource.create(title: fast_3, provider: source_7)
+ms_4 = MovieSource.create(title: fast_4, provider: source_3)
+ms_5 = MovieSource.create(title: fast_5, provider: source_5)
+ms_6 = MovieSource.create(title: fast_6, provider: source_4)
+ms_7 = MovieSource.create(title: fast_7, provider: source_1)
+ms_8 = MovieSource.create(title: fast_8, provider: source_8)
+ms_9 = MovieSource.create(title: love, provider: source_7)
+ms_10 = MovieSource.create(title: devil, provider: source_3)
+ms_11 = MovieSource.create(title: ps, provider: source_4)
+ms_12 = MovieSource.create(title: die_1, provider: source_2)
+ms_13 = MovieSource.create(title: die_2, provider: source_8)
+ms_14 = MovieSource.create(title: die_3, provider: source_6)
+ms_15 = MovieSource.create!(title: die_4, provider: source_5)
+ms_16 = MovieSource.create(title: die_5, provider: source_6)
