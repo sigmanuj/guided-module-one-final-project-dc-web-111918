@@ -14,20 +14,47 @@ class Cli
     gets.strip
   end
 
-  def gets_user_input
-  puts "We've got a wide selection of Movies we know you'll love."
-  puts "Enter a movie you'd like to watch to get started."
-  Movie.all.with_index.each do |movie, index|
-    puts "#{index}. #{movie.title}"
+  def gets_user_input(input)
+    puts "We've got a wide selection of Movies we know you'll love."
+    puts "Enter a movie you'd like to watch to get started."
 
-  # movie.find_by(title: movie)
+    movie_title_input = gets.chomp
+
+    8.times do
+      puts "."
+    end
+    puts "                    Finding"
+    8.times do
+      puts "."
+    end
+    puts "                     your"
+    8.times do
+      puts "."
+    end
+    puts "                     movie..."
+    8.times do
+      puts "."
+    end
+    puts "                     Got it!"
+    8.times do
+      puts "."
+    end
+
+    puts "         Here are some places you can watch #{movie_title_input}:"
+
+    ########## MATCH MOVIE_TITLE_INPUT TO DATA ###########
+
+   movie_title_input = Movie.where(title: movie_title_input).take
+    # self.list_sources(movie_title_input)
+  end
+
+  def list_sources(input)
+    Source.provider.each_with_index do |src, indx|
+      puts "#{indx+1}. #{src.provider}"
     end
   end
 
 
-  # def find_sources(provider)
-  # provider.sources
-  # end
   #
   # def show_sources(provider)
   # provider.each do |provider|
@@ -38,37 +65,10 @@ class Cli
   def run
     response1 = self.greeting
     self.gets_user_input(response1)
+
     # input = gets_user_input
     # find_movie(input)
     # run
   end
 end
-#   def search_movies
 #
-#   end
-#
-#   def gets_user_input
-#     puts ""
-#     puts "What movie are you looking for?"
-#       ###get input from user's search response
-#   end
-#
-# ######################### BACK END ###############################################################################
-#
-# ########### DEFINE USER INPUT METHODS HERE:
-#   def sdafa
-#     ## when 1 is pressed, return "help" helper method
-#     ## when 2 is pressed, prompt user to enter search via
-#     ##
-#
-#
-#   end
-#     #######        I'M TIRED
-#
-#
-#
-# ############ HELPER METHODS:
-#
-#     def help
-#       puts "Instructions: Please input the title of the movie you're searcing for."
-#     end
