@@ -14,14 +14,20 @@ class Cli
     gets.strip
   end
 
-  def gets_user_input
+  def gets_user_input(input1)
   puts "We've got a wide selection of Movies we know you'll love."
-  puts "Enter a movie you'd like to watch to get started."
-  Movie.all.with_index.each do |movie, index|
-    puts "#{index}. #{movie.title}"
+  puts "Select a movie you'd like to watch to get started."
+  Movie.all.each_with_index do |movie, index|
+    puts "#{index+1}. #{movie.title}"
+
 
   # movie.find_by(title: movie)
     end
+    gets.strip
+  end
+
+  def gets_user_search
+
   end
 
 
@@ -38,6 +44,10 @@ class Cli
   def run
     response1 = self.greeting
     self.gets_user_input(response1)
+    response2 = self.gets_user_input(response1)
+    self.gets_user_search(response2)
+
+
     # input = gets_user_input
     # find_movie(input)
     # run
