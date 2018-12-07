@@ -6,6 +6,7 @@ Movie.destroy_all
 Source.destroy_all
 MovieSource.destroy_all
 
+
 ####MOVIES#########
 fast_1 = Movie.find_or_create_by(title: "The Fast and the Furious")
 fast_2 = Movie.find_or_create_by(title: "2 Fast 2 Furious")
