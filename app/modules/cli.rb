@@ -39,21 +39,23 @@ class Cli
     8.times do
       puts "."
     end
-
     puts "         Here are some places you can watch #{movie_title_input}:"
 
     ########## MATCH MOVIE_TITLE_INPUT TO DATA ###########
 
-   movie_title_input = Movie.where(title: movie_title_input).take
+   movie_title_input = Movie.where(title: movie_title_input).take.list_sources
+
+
     # self.list_sources(movie_title_input)
   end
 
+
   def list_sources(input)
+    binding.pry
     Source.provider.each_with_index do |src, indx|
       puts "#{indx+1}. #{src.provider}"
     end
   end
-
 
   #
   # def show_sources(provider)
